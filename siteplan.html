@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website plan for Exploring Malawi's Cultural Heritage.">
-    <title>Website Plan: Exploring Malawi's Cultural Heritage</title>
-    <link rel="stylesheet" href="siteplan.css">
+    <title>Malawi Cultural Heritage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>Malawi Cultural Heritage</h1>
+        <div class="hero-content">
+            <h1>Explore Malawi's Cultural Heritage</h1>
+            <p>Discover the beauty of traditional music, dances, art, and cuisine from Malawi.</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Dances</a></li>
-                <li><a href="#">Art</a></li>
-                <li><a href="#">Cuisine</a></li>
-                <li><a href="#">Landmarks</a></li>
-                <li><a href="#">Festivals</a></li>
-            </ul>
-        </nav>
     </header>
+    
 
-    <main>
-        <section class="content">
-            <h2>Explore Malawi's Culture</h2>
-            <p>Discover the beauty of traditional music, dances, art, and cuisine from Malawi. Learn about our cultural landmarks and vibrant festivals.</p>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#dances">Dances</a></li>
+            <li><a href="#art">Art</a></li>
+            <li><a href="#cuisine">Cuisine</a></li>
+            <li><a href="#landmarks">Landmarks</a></li>
+            <li><a href="#festivals">Festivals</a></li>
+        </ul>
+    </nav>
 
-        <section class="scenarios">
-            <h2>Scenarios</h2>
-            <ul>
-                <li>What are the most famous cultural festivals in Malawi?</li>
-                <li>Where can I learn traditional Malawian dances?</li>
-            </ul>
-        </section>
+    <section id="attributes">
+        <h2>Explore Malawi's Attributes</h2>
+        <div class="grid-container">
+            <!-- Attribute 1 -->
+            <div class="attribute">
+                <img src="images/music.jpg" alt="Traditional Malawian Music">
+                <h3>Music</h3>
+                <p>Traditional Malawian music features rhythms and instruments such as the marimba and drums. Modern music includes Afro-jazz and reggae.</p>
+            </div>
+            <!-- Attribute 2 -->
+            <div class="attribute">
+                <img src="images/dances.jpeg" alt="Malawian Traditional Dances">
+                <h3>Dances</h3>
+                <p>Malawi is known for traditional dances like the Gule Wamkulu and Chisamba, which hold significant cultural meaning.</p>
+            </div>
+            <!-- Attribute 3 -->
+            <div class="attribute">
+                <img src="images/art.jpeg" alt="Malawian Art">
+                <h3>Art</h3>
+                <p>Malawian art showcases intricate wood carvings, vibrant paintings, and crafts that reflect the country's heritage.</p>
+            </div>
+            <!-- Attribute 4 -->
+            <div class="attribute">
+                <img src="images/cuisine.jpeg" alt="Malawian Cuisine">
+                <h3>Cuisine</h3>
+                <p>Malawian cuisine includes staples like nsima, complemented by fish dishes from Lake Malawi and a variety of fresh vegetables.</p>
+            </div>
+            <!-- Attribute 5 -->
+            <div class="attribute">
+                <img src="images/landmarks.jpg" alt="Malawian Landmarks">
+                <h3>Landmarks</h3>
+                <p>Explore iconic landmarks such as Mount Mulanje, Lake Malawi, and historical sites like Livingstonia Mission.</p>
+            </div>
+            <!-- Attribute 6 -->
+            <div class="attribute">
+                <img src="images/festivals.jpg" alt="Malawian Festivals">
+                <h3>Festivals</h3>
+                <p>Experience Malawi's vibrant festivals, including the Lake of Stars Festival and cultural celebrations in various regions.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <section class="color-schema">
-            <h2>Color Schema</h2>
-            <ul>
-                <li>Primary Color: #4CAF50 - Used for headings and buttons.</li>
-                <li>Secondary Color: #FFC107 - Used for accents, like links and highlights.</li>
-            </ul>
-        </section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <section class="typography">
-            <h2>Typography</h2>
-            <ul>
-                <li>Font: "Roboto", sans-serif - Used for body text.</li>
-                <li>Font: "Arial", sans-serif - Used for headings and navigation.</li>
-            </ul>
-        </section>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
-        <section class="wireframe">
-            <h2>Wireframe</h2>
-            <p>Below is the wireframe for the homepage layout for both mobile and desktop views:</p>
-            <ul>
-                <li><a href="mobile-wireframe.png" target="_blank">Mobile View Wireframe</a></li>
-                <li><a href="desktop-wireframe.png" target="_blank">Desktop View Wireframe</a></li>
-            </ul>
-        </section>
-    </main>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Malawi Cultural Heritage. All rights reserved.</p>
+        <p>&copy; <span id="footer-year"></span> Malawi Cultural Heritage. <span id="footer-modified"></span></p>
+        <a href="attributions.html">Attributions</a>
     </footer>
 </body>
+
 </html>
