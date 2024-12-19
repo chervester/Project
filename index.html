@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploring Malawi's Cultural Heritage</title>
+    <meta
+      name="description"
+      content="Explore Malawi's rich cultural heritage, including traditional music, dances, art, cuisine, historical landmarks, and cultural festivals."
+    />
+    <meta name="author" content="Chervester Nyasulu" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="scripts/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <img src="images/malawi-hero.jpg" alt="Beautiful landscape of Malawi" class="hero-image" />
+        <div class="overlay">
+          <h1>Malawi's Cultural Heritage</h1>
+          <nav role="navigation">
+            <ul>
+              <li><a href="#about" aria-label="About the project">About</a></li>
+              <li><a href="#music-dances" aria-label="Traditional music and dances">Music & Dances</a></li>
+              <li><a href="#art-cuisine" aria-label="Art and cuisine">Art & Cuisine</a></li>
+              <li><a href="#landmarks" aria-label="Historical landmarks">Landmarks</a></li>
+              <li><a href="#festivals" aria-label="Cultural festivals and events">Festivals</a></li>
+              <li><a href="#contact" aria-label="Contact information">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About This Project</h2>
+          <p>
+            This website is dedicated to showcasing Malawi's rich cultural heritage.
+            Learn about traditional music, dances, art, cuisine, historical landmarks,
+            and vibrant festivals that make Malawi unique.
+          </p>
+        </div>
+      </section>
+      
+      <section id="music-dances" class="section">
+        <div class="container">
+          <h2>Traditional Music & Dances</h2>
+          <p>Explore iconic traditional music and dances such as:</p>
+          <ul>
+            <li>
+              <img src="images/gulewamkulu.jpg" alt="Traditional Gule Wamkulu dance performed during ceremonies" />
+              <span>Gule Wamkulu</span>
+            </li>
+            <li>
+              <img src="images/ingoma.jpg" alt="Ingoma dance" />
+              <span>Ingoma</span>
+            </li>
+            <li>
+              <img src="images/vimbuza.jpg" alt="Vimbuza dance" />
+              <span>Vimbuza</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="art-cuisine" class="section">
+        <div class="container">
+          <h2>Art & Cuisine</h2>
+          <p>Discover Malawi's unique art forms and delicious traditional dishes.</p>
+          <ul>
+            <li>
+              <img src="images/malawian_painting.jpg" alt="Traditional Malawian painting" />
+              <span>Traditional Malawian Painting</span>
+            </li>
+            <li>
+              <img src="images/wood_carving.jpg" alt="Handcrafted wood carving" />
+              <span>Handcrafted Wood Carving</span>
+            </li>
+            <li>
+              <img src="images/nsima.jpg" alt="Nsima served with relish" />
+              <span>Nsima with Relish</span>
+            </li>
+          </ul>
+        </div>
+      </section>      
+
+      <section id="landmarks" class="section">
+        <div class="container">
+          <h2>Historical Landmarks</h2>
+          <p>Learn about Malawi’s significant historical sites, including:</p>
+          <ul>
+            <li>
+              <img src="images/livingstonia.jpg" alt="Livingstonia Mission" />
+              <span>Livingstonia Mission</span>
+            </li>
+            <li>
+              <img src="images/stmichael.jpg" alt="St. Michael and All Angels Church" />
+              <span>St. Michael and All Angels Church</span>
+            </li>
+            <li>
+              <img src="images/chongoni.jpg" alt="Chongoni Rock Art Area" />
+              <span>Chongoni Rock Art Area</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="festivals" class="section">
+        <div class="container">
+          <h2>Cultural Festivals & Events</h2>
+          <p>Join in vibrant festivals such as:</p>
+          <ul>
+            <li>
+              <img src="images/lakeofstars.jpg" alt="Lake of Stars Festival" />
+              <span>Lake of Stars Festival</span>
+            </li>
+            <li>
+              <img src="images/blantyrearts.jpg" alt="Blantyre Arts Festival" />
+              <span>Blantyre Arts Festival</span>
+            </li>
+            <li>
+              <img src="images/mulhako.jpg" alt="Mulhako wa Alhomwe" />
+              <span>Mulhako wa Alhomwe</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more about Malawi's culture? Reach out to us!</p>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

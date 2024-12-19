@@ -3,33 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Plan: Exploring Malawi's Cultural Heritage</title>
     <meta
       name="description"
-      content="Showcasing Malawi's cultural heritage through traditional music, dances, art, cuisine, and historical landmarks."
+      content="Website plan for Exploring Malawi's Cultural Heritage."
     />
+    <script defer src="scripts/siteplan.js"></script>
     <meta name="author" content="Chervester Nyasulu" />
-    <title>Exploring Malawi's Cultural Heritage</title>
     <link rel="stylesheet" href="styles/siteplan.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="scripts/siteplan.js"></script>
   </head>
   <body>
     <header>
       <h1>Website Project Plan - Exploring Malawi's Cultural Heritage</h1>
-      <nav>
-        <ul>
-          <li><a href="#project-subject">Project Subject</a></li>
-          <li><a href="#description">Content Description</a></li>
-          <li><a href="#reason">Reason</a></li>
-          <li><a href="#color-schema">Color Schema</a></li>
-          <li><a href="#typography">Typography</a></li>
-        </ul>
-      </nav>
     </header>
-
     <main>
       <section id="project-subject">
         <h2>Project Subject</h2>
@@ -91,8 +81,12 @@
         <p>
           <strong>Secondary Color:</strong> #FFD700 (Gold - used for accents, buttons, and highlights)
         </p>
-        <div class="color-example primary">Primary Color Example</div>
-        <div class="color-example secondary">Secondary Color Example</div>
+        <div style="background-color: #1E90FF; color: #fff; padding: 10px">
+          Primary Color Example
+        </div>
+        <div style="background-color: #FFD700; color: #000; padding: 10px">
+          Secondary Color Example
+        </div>
       </section>
 
       <section id="typography">
@@ -106,32 +100,16 @@
       <section id="wireframe">
         <h2>Wireframe</h2>
         <h3>Mobile View</h3>
-        <img
-          src="images/mobile-wireframe.png"
-          alt="Wireframe showing the layout of the mobile view for the website."
-          loading="lazy"
-        />
+        <img src="images/mobile-wireframe.png" alt="Mobile Wireframe Example" />
         <h3>Desktop View</h3>
-        <img
-          src="images/desktop-wireframe.png"
-          alt="Wireframe showing the layout of the desktop view for the website."
-          loading="lazy"
-        />
+        <img src="images/desktop-wireframe.png" alt="Desktop Wireframe Example" />
       </section>
     </main>
-
     <footer>
-      <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+      <p>
+        &copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi
+      </p>
       <p id="lastModified"></p>
     </footer>
-
-    <script>
-      // Dynamically update the current year
-      document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-      // Dynamically update the last modified date
-      document.getElementById("lastModified").textContent =
-        "Last Modified: " + document.lastModified;
-    </script>
   </body>
 </html>

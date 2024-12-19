@@ -1,9 +1,15 @@
-document.addEventListener("DOMContentLoaded", (e) => {
+// Automatically update the current year in the footer
+document.addEventListener("DOMContentLoaded", () => {
+  const currentYearElement = document.getElementById("currentyear");
+  const lastModifiedElement = document.getElementById("lastModified");
+
+  if (currentYearElement) {
     const currentYear = new Date().getFullYear();
-    document.getElementById("currentyear").textContent = currentYear;
-  
+    currentYearElement.textContent = currentYear;
+  }
+
+  if (lastModifiedElement) {
     const lastModified = document.lastModified;
-    document.getElementById(
-      "lastModified"
-    ).textContent = `Last Modified: ${lastModified}`;
-  });
+    lastModifiedElement.textContent = `Last Updated: ${lastModified}`;
+  }
+});
