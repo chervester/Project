@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malawi's Cultural Heritage</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Malawi's Cultural Heritage</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music-dances.html">Music & Dances</a></li>
+        <li><a href="art-cuisine.html">Art & Cuisine</a></li>
+        <li><a href="landmarks.html">Landmarks</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <ul>
+        <li>
+            <img src="images/livingstonia.jpg" alt="Livingstonia Mission">
+            <span>Livingstonia Mission</span>
+            <p>The Livingstonia Mission was founded in 1894 by Scottish missionaries led by Dr. Robert Laws. Located in northern Malawi, near the Nyika Plateau and overlooking Lake Malawi, the mission was established as a center for education, healthcare, and the spread of Christianity. It played a key role in introducing Western education and medical practices to the region while fostering local development.</p>
+          </li>
+          <li>
+            <img src="images/stmichael.jpg" alt="St. Michael and All Angels Church">
+            <span>St. Michael and All Angels Church</span>
+            <p>St. Michael and All Angels Church, located in Blantyre, Malawi, is a masterpiece of African Christian architecture. Built between 1888 and 1891 under the direction of Reverend David Clement Scott, the church was constructed using locally sourced materials and techniques. It stands as a symbol of resilience and ingenuity, blending Gothic architectural influences with traditional craftsmanship.</p>
+          </li>
+          <li>
+            <img src="images/chongoni.jpg" alt="Chongoni Rock Art Area">
+            <span>Chongoni Rock Art Area</span>
+            <p>The Chongoni Rock Art Area, located in central Malawi within the Dedza District, is a UNESCO World Heritage Site. It features a collection of rock art created by the Chewa and Batwa people, with some works dating back to the Stone Age. These paintings depict cultural rituals, daily life, and spiritual beliefs, offering invaluable insights into the region’s prehistoric and historic heritage.</p>
+          </li>
+          
+    </ul>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // JavaScript to update year and last modified date
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+  </script>
+</body>
+</html>

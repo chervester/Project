@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malawi's Cultural Heritage</title>
   <link rel="stylesheet" href="styles/style.css">
-  <script defer src="scripts/main.js"></script>
 </head>
 <body>
-
-  <!-- Header and Navigation -->
   <header>
     <h1>Malawi's Cultural Heritage</h1>
     <nav>
@@ -23,17 +20,20 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Main Content Section -->
   <main>
-    <section>
-      <h2>Welcome to Malawi's Cultural Heritage</h2>
-      <p>Malawi is a country with a rich cultural heritage. Explore its art, cuisine, music, and traditional practices that make it a truly unique and welcoming place. From the lush landscapes to the vibrant festivals, there's always something to discover.</p>
-      <p>We invite you to explore the diverse aspects of Malawi’s culture, from our vibrant festivals to the delicious tastes of traditional dishes like Nsima. Experience the dances, music, and art that reflect the beauty of our heritage.</p>
-    </section>
-  </main>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required aria-required="true">
 
-  <!-- Footer -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required aria-required="true">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
   <footer>
     <div class="container">
       <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
