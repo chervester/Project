@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malawi's Cultural Heritage</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <script defer src="scripts/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course Home Page for WDD 231 by Chervester Nyasulu" />
+  <meta name="author" content="Chervester Nyasulu" />
+  <title>Chervester Nyasulu | WDD 231</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <script src="scripts/app.js" defer></script>
 </head>
 <body>
-
-  <!-- Header and Navigation -->
   <header>
-    <h1>Malawi's Cultural Heritage</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="music-dances.html">Music & Dances</a></li>
-        <li><a href="art-cuisine.html">Art & Cuisine</a></li>
-        <li><a href="landmarks.html">Landmarks</a></li>
-        <li><a href="festivals.html">Festivals</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <img src="images/logo.jpg" alt="Site Logo" />
+    <span>Chervester Nyasulu</span>
+    <button id="hamburger" aria-label="Menu">&#9776;</button>
   </header>
+<!-- trigger rebuild -->
+  <nav id="navMenu">
+    <a href="#">Home</a>
+    <a href="#">Chamber</a>
+    <a href="#">Final</a>
+  </nav>
 
-  <!-- Main Content Section -->
   <main>
+    <h1>Welcome to My Course Page</h1>
+
     <section>
-      <h2>Welcome to Malawi's Cultural Heritage</h2>
-      <p>Malawi is a country with a rich cultural heritage. Explore its art, cuisine, music, and traditional practices that make it a truly unique and welcoming place. From the lush landscapes to the vibrant festivals, there's always something to discover.</p>
-      <p>We invite you to explore the diverse aspects of Malawi’s culture, from our vibrant festivals to the delicious tastes of traditional dishes like Nsima. Experience the dances, music, and art that reflect the beauty of our heritage.</p>
+      <h2>Certificate Courses</h2>
+      <div id="course-buttons">
+        <button id="allBtn">All Courses</button>
+        <button id="wddBtn">WDD Courses</button>
+        <button id="cseBtn">CSE Courses</button>
+      </div>
+      <div id="course-cards" class="courses"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a software development student from Malawi, passionate about frontend and backend technologies.</p>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
-      <p id="lastModified"></p>
-    </div>
+    <p>
+      <a href="https://github.com/Chervester" target="_blank" rel="noopener noreferrer">GitHub</a> |
+      <a href="https://linkedin.com/in/chervester-nyasulu-9a572717a" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://x.com/kaysnyasulu" target="_blank" rel="noopener noreferrer">X</a>
+    </p>
+    <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+    <p id="lastModified"></p>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    // JavaScript to update year and last modified date
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
-  </script>
 </body>
 </html>
