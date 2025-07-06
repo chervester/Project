@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #005f73;
+  color: white;
+  padding: 1rem;
+}
+
+header img {
+  height: 40px;
+}
+
+#hamburger {
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: #0a9396;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  padding: 0.75rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #94d2bd;
+  color: #000;
+}
+
+main {
+  padding: 1rem;
+}
+
+#course-buttons {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #005f73;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0a9396;
+}
+
+.courses {
+  display: grid;
+  gap: 1rem;
+}
+
+.course-card {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.completed {
+  background: #d8f3dc;
+  border-color: #40916c;
+}
+
+footer {
+  background: #005f73;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .courses {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
