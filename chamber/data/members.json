@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Sunrise Electronics",
+      "address": "123 Market St, Lilongwe",
+      "phone": "+265 111 111 111",
+      "website": "https://sunrise.mw",
+      "image": "sunrise.png",
+      "membership": 3
+    },
+    {
+      "name": "Green Farm Supply",
+      "address": "456 Agri Rd, Blantyre",
+      "phone": "+265 222 222 222",
+      "website": "https://greenfarm.mw",
+      "image": "greenfarm.png",
+      "membership": 2
+    },
+    {
+      "name": "Blue Lagoon Resort",
+      "address": "Lake Rd, Salima",
+      "phone": "+265 333 333 333",
+      "website": "https://bluelagoon.mw",
+      "image": "bluelagoon.png",
+      "membership": 1
+    },
+    {
+      "name": "TechWorks Malawi",
+      "address": "789 Digital Ave, Zomba",
+      "phone": "+265 444 444 444",
+      "website": "https://techworks.mw",
+      "image": "techworks.png",
+      "membership": 3
+    },
+    {
+      "name": "Malawi Coffee Co.",
+      "address": "321 Roast Rd, Mzuzu",
+      "phone": "+265 555 555 555",
+      "website": "https://malawicoffee.mw",
+      "image": "coffee.png",
+      "membership": 2
+    },
+    {
+      "name": "Eco Energy Ltd.",
+      "address": "444 Solar Blvd, Dedza",
+      "phone": "+265 666 666 666",
+      "website": "https://ecoenergy.mw",
+      "image": "ecoenergy.png",
+      "membership": 1
+    },
+    {
+      "name": "Chambo Telecom",
+      "address": "555 Connect St, Kasungu",
+      "phone": "+265 777 777 777",
+      "website": "https://chambotel.mw",
+      "image": "chambo.png",
+      "membership": 3
+    }
+  ]
+}

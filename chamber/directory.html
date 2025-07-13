@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malawi Chamber of Commerce Directory</title>
+  <meta name="description" content="Business Directory for Malawi Chamber of Commerce">
+  <meta name="author" content="Chervester Nyasulu">
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Malawi Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore the member directory for the Malawi Chamber of Commerce.">
+  <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Malawi Chamber of Commerce</h1>
+    <nav>
+      <button id="menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view-toggle">
+      <button id="grid-view">Grid View</button>
+      <button id="list-view">List View</button>
+    </section>
+    <section id="members-container" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>Contact us: info@malawichamber.org | Phone: +265 123 4567</p>
+    <p>&copy; <span id="year"></span> | Chervester Nyasulu | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="js/directory.js" type="module"></script>
+</body>
+</html>
