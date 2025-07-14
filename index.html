@@ -6,53 +6,65 @@
   <meta name="description" content="Course Home Page for WDD 231 by Chervester Nyasulu" />
   <meta name="author" content="Chervester Nyasulu" />
   <title>Chervester Nyasulu | WDD 231</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/styles.css" />
   <script src="scripts/app.js" defer></script>
 </head>
 <body>
   <header>
-    <img src="images/logo.jpg" alt="Site Logo" />
-    <span>Chervester Nyasulu</span>
-    <button id="hamburger" aria-label="Menu">&#9776;</button>
+    <img src="images/logo.png" alt="Site Logo" />
+    <span class="site-name">Chervester Nyasulu</span>
+    <button id="hamburger" aria-label="Open Menu">&#9776;</button>
   </header>
 
-  <nav id="navMenu">
-    <a href="#">Home</a>
-    <a href="#">Chamber</a>
-    <a href="#">Final</a>
-
-
+  <nav id="navMenu" class="hidden">
+    <a href="#" aria-current="page">Home</a>
+    <a href="#">Chamber Project</a>
+    <a href="#">Final Project</a>
   </nav>
 
   <main>
-    <h1>Welcome to My Course Page</h1>
+    <h1>Home</h1>
 
-    <section>
-      <h2>Certificate Courses</h2>
-      <div id="course-buttons">
-        <button id="allBtn">All Courses</button>
-        <button id="wddBtn">WDD Courses</button>
-        <button id="cseBtn">CSE Courses</button>
+    <section class="about-grid">
+      <div class="about-box">
+        <h3>About Me</h3>
+        <p>
+          I’m a software development student from Malawi, passionate about frontend and backend technologies.
+          I enjoy coding, learning new tools, and building real-world projects.
+        </p>
       </div>
-      <div id="course-cards" class="courses"></div>
-      <p>Total Credits: <span id="totalCredits">0</span></p>
+      <div class="about-box about-photo">
+        <h3>Student Photo</h3>
+        <img src="images/profile-placeholder.png" alt="Photo of Chervester Nyasulu" />
+      </div>
     </section>
 
     <section>
-      <h2>About Me</h2>
-      <p>I’m a software development student from Malawi, passionate about frontend and backend technologies.</p>
+      <h2>Web Certificate Courses</h2>
+      <div id="course-buttons">
+        <button id="allBtn">All</button>
+        <button id="cseBtn">CSE</button>
+        <button id="wddBtn">WDD</button>
+      </div>
+      <div id="course-cards" class="courses"></div>
+      <p>The total credits for course listed above is <span id="totalCredits">0</span></p>
     </section>
   </main>
 
   <footer>
     <p>
-      <a href="https://github.com/Chervester" target="_blank" rel="noopener noreferrer">GitHub</a> |
       <a href="https://linkedin.com/in/chervester-nyasulu-9a572717a" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://github.com/Chervester" target="_blank" rel="noopener noreferrer">GitHub</a> |
       <a href="https://x.com/kaysnyasulu" target="_blank" rel="noopener noreferrer">X</a>
     </p>
-    <p>&copy; <span id="currentyear"></span> Chervester Nyasulu, Malawi</p>
+    <p>&copy; <span id="currentyear"></span> Chervester Nyasulu • Malawi</p>
     <p id="lastModified"></p>
   </footer>
 </body>

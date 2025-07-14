@@ -1,4 +1,6 @@
-// Courses array
+// --------------------
+// Courses Array
+// --------------------
 const courses = [
   { code: "WDD 130", name: "Web Fundamentals", credits: 2, completed: true },
   { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 2, completed: true },
@@ -9,14 +11,23 @@ const courses = [
   { code: "CSE 222a", name: "Data Structures", credits: 2, completed: false }
 ];
 
+// --------------------
+// DOM Elements
+// --------------------
 const courseList = document.getElementById("course-cards");
 const totalCredits = document.getElementById("totalCredits");
 
+// --------------------
+// Render Courses
+// --------------------
 function renderCourses(courseArray) {
   courseList.innerHTML = "";
-  let credits = courseArray.reduce((sum, course) => sum + course.credits, 0);
+
+  let credits = 0;
 
   courseArray.forEach(course => {
+    credits += course.credits;
+
     const card = document.createElement("div");
     card.className = "course-card";
     if (course.completed) card.classList.add("completed");
@@ -25,14 +36,20 @@ function renderCourses(courseArray) {
       <h3>${course.code}</h3>
       <p>${course.name}</p>
       <p>Credits: ${course.credits}</p>
-      <p>${course.completed ? "✅ Completed" : "❌ Not Completed"}</p>
+      <p aria-label="${course.completed ? "Course completed" : "Course not completed"}">
+        ${course.completed ? "✅ Completed" : "❌ Not Completed"}
+      </p>
     `;
+
     courseList.appendChild(card);
   });
 
   totalCredits.textContent = credits;
 }
 
+// --------------------
+// Filter Buttons
+// --------------------
 document.getElementById("allBtn").addEventListener("click", () => {
   renderCourses(courses);
 });
@@ -45,14 +62,25 @@ document.getElementById("cseBtn").addEventListener("click", () => {
   renderCourses(courses.filter(c => c.code.startsWith("CSE")));
 });
 
-// Initial render
+// --------------------
+// Initial Render
+// --------------------
 renderCourses(courses);
 
-// Footer info
+// --------------------
+// Footer Info
+// --------------------
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-// Hamburger menu toggle
+// --------------------
+// Hamburger Toggle
+// --------------------
 document.getElementById("hamburger").addEventListener("click", () => {
-  document.getElementById("navMenu").classList.toggle("open");
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("open");
+
+  // Optional: Update ARIA state
+  const expanded = nav.classList.contains("open");
+  document.getElementById("hamburger").setAttribute("aria-expanded", expanded);
 });
