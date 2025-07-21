@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malawi Chamber of Commerce | Home</title>
+  <meta name="description" content="Home page of the Malawi Chamber of Commerce website" />
+  <meta property="og:title" content="Malawi Chamber of Commerce" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Malawi Chamber of Commerce</h1>
+    <nav>
+      <button id="menu" aria-label="Toggle menu">☰</button>
+      <ul class="navigation" id="nav-list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero with CTA -->
+    <section class="hero" aria-label="Welcome banner">
+      <img src="images/hero.jpg" alt="Malawi cityscape at sunrise" />
+      <a href="join.html" class="cta-button">Join the Chamber Today!</a>
+    </section>
+
+    <!-- Current Events -->
+    <section class="current-events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Current Events</h2>
+      <article>
+        <h3>Annual Business Conference 2025</h3>
+        <p>Join us March 10-12 for workshops and networking with top industry leaders.</p>
+      </article>
+      <article>
+        <h3>Small Business Grant Applications Open</h3>
+        <p>Apply by August 1 to get funding for your growing business.</p>
+      </article>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Current Weather in Lilongwe</h2>
+      <div id="weather-container" aria-live="polite">
+        <p>Loading weather data...</p>
+      </div>
+    </section>
+
+    <!-- Company Spotlights -->
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div id="spotlight-container" class="grid" role="list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us: info@malawichamber.org | Phone: +265 123 4567</p>
+    <p>
+      &copy; <span id="year"></span> | Chervester Nyasulu | WDD 231 | Last Modified:
+      <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <script src="js/weather.js" type="module"></script>
+  <script src="js/spotlight.js" type="module"></script>
+  <script>
+    // Dynamic footer year and last modified date
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    // Responsive navigation toggle for small screens
+    const menuButton = document.getElementById('menu');
+    const navList = document.getElementById('nav-list');
+    menuButton.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
