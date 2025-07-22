@@ -252,3 +252,53 @@ footer {
   width: 60px;
   height: 60px;
 }
+
+#spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.spotlight-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-card:hover {
+  transform: scale(1.05);
+}
+
+.spotlight-card img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.spotlight-card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.spotlight-card a:hover {
+  text-decoration: underline;
+}
+
+.membership {
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5rem;
+}
