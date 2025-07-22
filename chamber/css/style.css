@@ -230,3 +230,25 @@ footer {
     align-items: center;
   }
 }
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  flex: 1 1 30%;
+  background-color: #e9f5ff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.forecast-card img {
+  width: 60px;
+  height: 60px;
+}
