@@ -1,45 +1,48 @@
-const spotlightContainer = document.getElementById("spotlight-container");
+const apiKey = 'f680ec08c7e0fbda88c6eb9c9cdbdad0';
+const city = 'Lilongwe';
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
-async function loadSpotlights() {
+const weatherContainer = document.getElementById('weather-container');
+
+async function fetchWeather() {
   try {
-    const response = await fetch("data/spotlight-members.json");
-    if (!response.ok) throw new Error("Members data not available");
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Forecast fetch failed');
 
     const data = await response.json();
 
-    const goldSilverMembers = data.members.filter(member =>
-      member.membership.toLowerCase() === "gold" || member.membership.toLowerCase() === "silver"
-    );
+    // Get 3 midday forecasts
+    const threeDays = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
 
-    if (goldSilverMembers.length === 0) {
-      spotlightContainer.innerHTML = '<p>No spotlight members found.</p>';
-      return;
-    }
+    // Header
+    let forecastHTML = `<h3>${city} - 3 Day Forecast</h3>`;
+    forecastHTML += `<div class="forecast-grid">`;
 
-    const count = Math.min(goldSilverMembers.length, 3);
-    const selected = [];
+    // Each day's forecast
+    threeDays.forEach(day => {
+      const date = new Date(day.dt_txt);
+      const temperature = day.main.temp;
+      const description = day.weather[0].description;
+      const icon = day.weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-    while (selected.length < count) {
-      const randIndex = Math.floor(Math.random() * goldSilverMembers.length);
-      if (!selected.includes(goldSilverMembers[randIndex])) {
-        selected.push(goldSilverMembers[randIndex]);
-      }
-    }
+      forecastHTML += `
+        <div class="forecast-card">
+          <p><strong>${date.toDateString()}</strong></p>
+          <img src="${iconUrl}" alt="${description}" />
+          <p>${temperature.toFixed(1)}°C</p>
+          <p>${description}</p>
+        </div>
+      `;
+    });
 
-    spotlightContainer.innerHTML = selected.map(member => `
-      <div class="spotlight-card" role="listitem">
-        <img src="${member.logo}" alt="${member.name} logo" />
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>Phone: ${member.phone}</p>
-        <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
-        <p class="membership">${member.membership} Member</p>
-      </div>
-    `).join('');
+    forecastHTML += `</div>`; // close grid
+    weatherContainer.innerHTML = forecastHTML;
+
   } catch (error) {
-    console.error('Spotlight loading error:', error);
-    spotlightContainer.innerHTML = '<p>Error loading spotlights.</p>';
+    weatherContainer.innerHTML = `<p>Unable to load forecast data at this time.</p>`;
+    console.error(error);
   }
 }
 
-loadSpotlights();
+fetchWeather();
