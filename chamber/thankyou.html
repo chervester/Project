@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Thank You | Malawi Chamber</title>
+  <link rel="icon" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Malawi Chamber of Commerce</h1>
+    <nav>
+      <button id="menu" aria-label="Toggle menu">☰</button>
+      <ul class="navigation" id="nav-list">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-main">
+    <h2>Thank You for Your Application!</h2>
+    <section id="confirmation">
+      <p><strong>First Name:</strong> <span id="cfname"></span></p>
+      <p><strong>Last Name:</strong> <span id="clname"></span></p>
+      <p><strong>Email:</strong> <span id="cemail"></span></p>
+      <p><strong>Phone:</strong> <span id="cphone"></span></p>
+      <p><strong>Organization:</strong> <span id="corg"></span></p>
+      <p><strong>Submitted On:</strong> <span id="ctime"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Chervester Nyasulu | WDD 231</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const p = new URLSearchParams(window.location.search);
+    document.getElementById('cfname').textContent = p.get('firstName') || '';
+    document.getElementById('clname').textContent = p.get('lastName') || '';
+    document.getElementById('cemail').textContent = p.get('email') || '';
+    document.getElementById('cphone').textContent = p.get('phone') || '';
+    document.getElementById('corg').textContent = p.get('organization') || '';
+    document.getElementById('ctime').textContent = p.get('timestamp') || '';
+  </script>
+</body>
+</html>
