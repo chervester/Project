@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Lake Malawi National Park",
+    "image": "images/lake-malawi.webp",
+    "address": "Cape Maclear, Malawi",
+    "description": "A UNESCO World Heritage Site famous for its crystal-clear waters and diverse cichlid fish species."
+  },
+  {
+    "name": "Mount Mulanje",
+    "image": "images/mulanje.webp",
+    "address": "Mulanje, Malawi",
+    "description": "Known as the 'Island in the Sky', Mount Mulanje offers hiking trails, waterfalls, and breathtaking views."
+  },
+  {
+    "name": "Liwonde National Park",
+    "image": "images/liwonde.webp",
+    "address": "Southern Region, Malawi",
+    "description": "Home to elephants, hippos, and a variety of bird species along the Shire River."
+  },
+  {
+    "name": "Zomba Plateau",
+    "image": "images/zomba.webp",
+    "address": "Zomba, Malawi",
+    "description": "A lush mountain plateau with pine forests, waterfalls, and panoramic viewpoints."
+  },
+  {
+    "name": "Mzuzu Market",
+    "image": "images/mzuzu-market.webp",
+    "address": "Mzuzu, Malawi",
+    "description": "A vibrant market offering fresh produce, crafts, and local delicacies."
+  },
+  {
+    "name": "Kuti Wildlife Reserve",
+    "image": "images/kuti.webp",
+    "address": "Salima District, Malawi",
+    "description": "A community-owned reserve with zebras, antelopes, and birdwatching opportunities."
+  },
+  {
+    "name": "Nkhotakota Wildlife Reserve",
+    "image": "images/nkhotakota.webp",
+    "address": "Central Region, Malawi",
+    "description": "One of Africa’s oldest protected areas, rich in biodiversity."
+  },
+  {
+    "name": "Chongoni Rock Art Area",
+    "image": "images/chongoni.webp",
+    "address": "Dedza, Malawi",
+    "description": "Features ancient rock paintings depicting the cultural history of Malawi."
+  }
+]

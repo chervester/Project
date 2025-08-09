@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discover Malawi | Malawi Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Malawi Chamber of Commerce</h1>
+    <nav>
+      <button id="menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+      <ul class="navigation" id="nav-list" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="discover-layout">
+    <section class="discover-cards" aria-label="Places of Interest" id="places-container">
+      <!-- Cards injected via discover.js -->
+    </section>
+
+    <aside class="visit-message" aria-live="polite" id="visit-message">
+      <!-- Last visit message injected via discover.js -->
+    </aside>
+  </main>
+
+  <footer>
+    <p>Contact us: info@malawichamber.org | Phone: +265 123 4567</p>
+    <p>
+      &copy; <span id="year"></span> | Chervester Nyasulu | WDD 231 | Last Modified:
+      <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <script src="js/discover.js" type="module"></script>
+  <script>
+    // Dynamic year and last modified
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    // Menu toggle with aria-expanded and hidden attributes for accessibility
+    const menuBtn = document.getElementById('menu');
+    const navList = document.getElementById('nav-list');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navList.hasAttribute('hidden');
+      if (isOpen) {
+        navList.removeAttribute('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        navList.setAttribute('hidden', '');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
