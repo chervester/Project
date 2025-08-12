@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Browse universities in Malawi — dynamic directory.">
+  <meta name="author" content="Chervester Nyasulu">
+  <title>Universities — MalawiUniGuide</title>
+  <link rel="icon" href="images/favicon.webp">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="page-universities">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="images/favicon.webp" alt="MalawiUniGuide logo" class="logo">
+      <h1>MalawiUniGuide</h1>
+    </div>
+
+    <nav class="main-nav" aria-label="Main">
+      <button id="hamburger-2" class="hamburger" aria-expanded="false" aria-controls="nav-links-2" aria-label="Menu">
+        <span class="hamb-line" aria-hidden="true"></span>
+        <span class="hamb-line" aria-hidden="true"></span>
+        <span class="hamb-line" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-links-2" class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="universities.html" aria-current="page">Universities</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filters">
+      <div class="search">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="name, city, program...">
+      </div>
+      <div class="filters">
+        <label for="type">Type</label>
+        <select id="type"><option value="all">All</option><option>Public</option><option>Private</option></select>
+        <label for="program">Program</label>
+        <select id="program"><option value="all">All</option></select>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="results">Universities</h2>
+      <div id="list" class="grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year2"></span> Chervester Nyasulu</p>
+    <p><a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO" target="_blank" rel="noopener">Demo video</a></p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-inner" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modal-title"></h3>
+      <img id="modal-image" alt="" loading="lazy">
+      <p id="modal-desc"></p>
+      <ul id="modal-info"></ul>
+      <a id="modal-site" href="#" target="_blank" rel="noopener" class="btn">Visit website</a>
+    </div>
+  </div>
+
+  <template id="full-card">
+    <article class="card">
+      <img class="card-img" loading="lazy" alt="">
+      <div class="card-body">
+        <h3 class="card-name"></h3>
+        <p class="card-location"></p>
+        <p class="card-desc"></p>
+        <div class="card-tags"></div>
+        <div class="card-actions">
+          <button class="btn details">Details</button>
+          <button class="btn fav" aria-pressed="false">♡ Favorite</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

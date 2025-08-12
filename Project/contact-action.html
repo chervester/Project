@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Submission — MalawiUniGuide</title>
+  <link rel="icon" href="images/favicon.webp">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Form Submission</h2>
+    <div id="result" aria-live="polite"></div>
+    <p><a href="contact.html">Back to contact</a></p>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const result = document.getElementById('result');
+    if (!params.toString()) result.innerHTML = '<p>No data submitted.</p>';
+    else {
+      const dl = document.createElement('dl');
+      Array.from(params.entries()).forEach(([k,v])=>{
+        const dt = document.createElement('dt'); dt.textContent = k;
+        const dd = document.createElement('dd'); dd.textContent = v;
+        dl.appendChild(dt); dl.appendChild(dd);
+      });
+      result.appendChild(dl);
+    }
+  </script>
+</body>
+</html>

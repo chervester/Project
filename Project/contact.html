@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact MalawiUniGuide.">
+  <meta name="author" content="Chervester Nyasulu">
+  <title>Contact — MalawiUniGuide</title>
+  <link rel="icon" href="images/favicon.webp">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="page-contact">
+  <header class="site-header">
+    <div class="brand"><img src="images/favicon.webp" alt="MalawiUniGuide logo" class="logo"><h1>MalawiUniGuide</h1></div>
+    <nav class="main-nav" aria-label="Main"><ul class="nav-links" role="menubar">
+      <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+      <li role="none"><a role="menuitem" href="universities.html">Universities</a></li>
+      <li role="none"><a role="menuitem" href="about.html">About</a></li>
+      <li role="none"><a role="menuitem" href="contact.html" aria-current="page">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <main class="container">
+    <h2>Contact & Inquiry</h2>
+    <form id="contact-form" action="contact-action.html" method="GET" novalidate>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="university">University (optional)</label>
+      <input id="university" name="university" type="text" placeholder="e.g., MUST">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer><p>&copy; <span id="year4"></span> Chervester Nyasulu</p></footer>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

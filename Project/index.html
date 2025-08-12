@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="MalawiUniGuide — quick guide to universities in Malawi.">
+  <meta name="author" content="Chervester Nyasulu">
+  <title>MalawiUniGuide — Home</title>
+  <link rel="icon" href="images/favicon.webp">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="page-home">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="images/favicon.webp" alt="MalawiUniGuide logo" class="logo">
+      <h1>MalawiUniGuide</h1>
+    </div>
+
+    <nav class="main-nav" aria-label="Main">
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="hamb-line" aria-hidden="true"></span>
+        <span class="hamb-line" aria-hidden="true"></span>
+        <span class="hamb-line" aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" aria-current="page">Home</a></li>
+        <li role="none"><a role="menuitem" href="universities.html">Universities</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Find the right university in Malawi</h2>
+      <p>Search programs, compare campuses, and save favorites — all in one place.</p>
+      <a class="btn" href="universities.html">Explore Universities</a>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <h3 id="featured-title">Featured</h3>
+      <div id="featured-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="quick-info">
+      <h3>Why MalawiUniGuide</h3>
+      <p>Short, clear, and up-to-date information to help students choose the best university fit.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Chervester Nyasulu</p>
+    <p><a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO" target="_blank" rel="noopener">Demo video</a></p>
+  </footer>
+
+  <template id="card-tpl">
+    <article class="card">
+      <img class="card-img" loading="lazy" alt="">
+      <div class="card-body">
+        <h4 class="card-name"></h4>
+        <p class="card-meta"></p>
+        <div class="card-actions">
+          <button class="btn details">Details</button>
+          <button class="btn fav" aria-pressed="false">♡</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
